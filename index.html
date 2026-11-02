@@ -1,161 +1,334 @@
-🌸💖
-About
-Projects
-Certificates
-Skills
-Education
-Contact
-Hi, I’m Aya! 🎀
-Cybersecurity student on my way to becoming a SOC analyst and pentester
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aya Al Obaidi | Cybersecurity Portfolio</title>
+<meta name="description" content="Cybersecurity student passionate about SOC analysis and penetration testing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+<style>
+:root{
+  --blush:#FFF3F8; --petal:#FFD9E8; --candy:#FF8FBE; --berry:#D63A82;
+  --plum:#5B2748; --lilac:#E6D8FF; --white:#fff;
+  --head:'Fredoka','Trebuchet MS',system-ui,sans-serif;
+  --body:'Nunito','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);color:var(--plum);background:var(--blush);line-height:1.65;
+  background-image:radial-gradient(var(--petal) 2px,transparent 2.5px);background-size:28px 28px;
+}
+a{color:var(--berry);font-weight:700}
+a:focus-visible,button:focus-visible{outline:3px solid var(--plum);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.2}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px}
 
-meow-terminal
-$ whoami
-aya-al-obaidi 🐾
-$ cat interests.txt
-soc analysis, penetration testing,
-ethical hacking, digital privacy
-$ cat status.txt
-final-year @ Canadian University Dubai
-graduating 2027, hunting for bugs and threats
-$ 
-See my projects
-Say hi
-About me
-I’m a final-year B.Sc. Cybersecurity student at Canadian University Dubai, and honestly, I can’t get enough of this field. I love the moment a pile of noisy logs turns into a story, and I love the moment a system that looked solid turns out to have a crack in it.
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:rgba(255,243,248,.92);backdrop-filter:blur(6px);border-bottom:3px dotted var(--candy)}
+nav .wrap{display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center;justify-content:center;padding-top:10px;padding-bottom:10px}
+nav a{text-decoration:none;font-family:var(--head);font-size:1.02rem;padding:4px 12px;border-radius:99px;color:var(--plum)}
+nav a:hover{background:var(--petal)}
 
-That’s why I’m aiming for a career in SOC analysis and penetration testing: watching for threats on the defense side, and thinking like an attacker to find weaknesses before someone else does. Ethical hacking, network security, and digital privacy are what I read about for fun.
+/* hero */
+.hero{padding:56px 0 40px;text-align:center}
+.hero h1{font-size:clamp(2.4rem,7vw,4rem);color:var(--berry);margin-bottom:6px}
+.hero .sub{font-size:1.25rem;font-weight:700;margin-bottom:34px}
+.hero .sub span{background:var(--petal);padding:2px 10px;border-radius:10px}
 
-So far I’ve built a signed-message system with RSA, written Linux tools in C, run adversarial experiments against edge services, and co-authored a research paper on the ethics and regulation of AI in cybersecurity. I’m just getting started, and I’m always learning something new. 💕
+.catwrap{position:relative;width:min(560px,100%);margin:0 auto}
+.peek{position:absolute;left:50%;top:-74px;width:130px;transform:translateX(-50%);animation:bob 3.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateX(-50%) translateY(-6px)}}
+.term{background:var(--white);border:4px solid var(--plum);border-radius:20px;box-shadow:8px 8px 0 var(--candy);text-align:left;overflow:hidden}
+.term .bar{background:var(--candy);border-bottom:4px solid var(--plum);padding:8px 14px;display:flex;gap:8px;align-items:center;font-family:var(--head);color:var(--white)}
+.term .dot{width:13px;height:13px;border-radius:50%;background:var(--white);border:2px solid var(--plum)}
+.term pre{font-family:ui-monospace,Consolas,Menlo,monospace;font-size:.93rem;padding:28px 18px 18px;white-space:pre-wrap;line-height:1.8}
+.term .p{color:var(--berry);font-weight:700}
+.term .o{color:var(--plum)}
+.cursor{display:inline-block;width:9px;height:1.05em;background:var(--berry);vertical-align:text-bottom}
 
-Projects
-Newest first.
+.btns{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-family:var(--head);font-size:1.05rem;padding:10px 24px;border-radius:99px;border:3px solid var(--plum);background:var(--candy);color:var(--plum);box-shadow:4px 4px 0 var(--plum);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--plum)}
+.btn.alt{background:var(--white)}
 
-LightEdge-Guard: Edge Microservice Security
-2026
-Security Lead, team research project with Maryam and Ketty
+/* sections */
+section{padding:46px 0}
+h2{font-size:2rem;color:var(--berry);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+h2 svg{width:40px;height:40px;flex:none}
+.box{background:var(--white);border:3px solid var(--plum);border-radius:24px;padding:26px 28px;box-shadow:6px 6px 0 var(--petal)}
+.box p+p{margin-top:14px}
 
-Led research into resource exhaustion attacks and anomaly detection for edge computing microservices.
-Designed an adversarial experiment grid covering three attack scenarios: noisy neighbor, memory pressure, and request flood.
-Simulated attack traffic with Locust and tested ML classifiers (Random Forest, SVM, MLP) to spot attack signatures.
-Security research
-Locust
-Machine learning
-Research Paper: AI/ML in Cybersecurity, Ethics and Regulation
-2026
-Co-author, Canadian University Dubai, Department of Cybersecurity
+/* projects timeline */
+.tl{list-style:none;position:relative;padding-left:34px}
+.tl:before{content:"";position:absolute;left:11px;top:6px;bottom:6px;border-left:4px dotted var(--candy)}
+.tl li{position:relative;margin-bottom:22px}
+.tl li:before{content:"🐾";position:absolute;left:-36px;top:14px;font-size:1.15rem;background:var(--blush);line-height:1}
+.proj{background:var(--white);border:3px solid var(--plum);border-radius:20px;padding:18px 22px}
+.proj.star{background:var(--petal);box-shadow:6px 6px 0 var(--candy)}
+.proj header{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline;margin-bottom:4px}
+.proj h3{font-size:1.25rem}
+.date{font-weight:700;color:var(--berry);font-size:.95rem}
+.role{font-size:.95rem;font-style:italic;margin-bottom:8px}
+.proj ul{padding-left:20px}
+.proj li{margin-bottom:4px}
+.proj li:before{content:none}
+.tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.tags span{background:var(--lilac);border-radius:99px;padding:2px 12px;font-size:.85rem;font-weight:700}
 
-Co-wrote a systematic literature review of 20 peer-reviewed sources on AI/ML in cybersecurity, covering ethics, regulation, and adversarial threats.
-Proposed the Three-Pillar Assessment Framework for Responsible AI Deployment: adversarial robustness, explainability security, and regulatory compliance mapping.
-Research
-AI ethics
-Regulation
-StreamVault: Streaming Platform Web App
-2026
-Built a Java web app prototype for a video-streaming platform with login, registration, subscriptions, and a watchlist.
-Connected it to a MySQL backend through JDBC.
-Java
-Servlets/JSP
-Maven
-MySQL
-Airline Reservation System: Database Case Study
-May 2026
-Individual project
+/* certs, skills */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.cert{background:var(--white);border:3px solid var(--plum);border-radius:20px;padding:18px 20px;text-align:center}
+.cert .em{font-size:2rem}
+.cert h3{font-size:1.1rem;margin:6px 0 2px}
+.cert p{font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:var(--white);border:3px solid var(--plum);border-radius:99px;padding:4px 16px;font-weight:700;font-size:.95rem}
+.chips span:nth-child(3n+1){background:var(--petal)}
+.chips span:nth-child(3n+2){background:var(--lilac)}
+.skills-title{font-family:var(--head);margin:22px 0 10px;font-size:1.15rem}
+.skills-title:first-child{margin-top:0}
 
-Designed a relational database covering aircraft, routes, passengers, flights, and reservations, with an ER diagram, schema, sample data, and query scripts.
-Rebuilt the same system in MongoDB with CRUD operations and aggregation pipelines to compare relational and NoSQL approaches.
-SQL (MySQL)
-MongoDB
-Signed Message Exchange Between Two Parties
-April 2026
-Team of 4
+/* contact */
+.contact{text-align:center}
+.contact p{margin-bottom:20px;font-size:1.1rem}
+footer{text-align:center;padding:30px 20px 46px;font-weight:700}
+.floaty{position:fixed;font-size:1.6rem;pointer-events:none;opacity:.75}
+.f1{left:2%;top:34%}.f2{right:2%;top:58%}
+@media (max-width:640px){.floaty{display:none}.box{padding:20px}.peek{width:104px;top:-60px}}
+@media (prefers-reduced-motion:reduce){.peek{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
 
-Built a secure signed-message exchange using 2048-bit RSA key pairs, SHA-256 hashing, and PKCS1v15 digital signatures.
-Showed that changing even one character invalidates the signature, proving tamper detection works.
-Python
-RSA
-SHA-256
-Linux Multi-Process File Monitoring and Backup System
-April 2026
-Team of 2
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cat" viewBox="0 0 120 100">
+    <path d="M14 46 L18 6 L50 26 Z" fill="#FFB3D1" stroke="#5B2748" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M106 46 L102 6 L70 26 Z" fill="#FFB3D1" stroke="#5B2748" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M22 36 L24 18 L38 28 Z" fill="#FF8FBE"/>
+    <path d="M98 36 L96 18 L82 28 Z" fill="#FF8FBE"/>
+    <ellipse cx="60" cy="60" rx="50" ry="38" fill="#FFF8FB" stroke="#5B2748" stroke-width="4"/>
+    <ellipse cx="42" cy="58" rx="6" ry="8" fill="#5B2748"/>
+    <ellipse cx="78" cy="58" rx="6" ry="8" fill="#5B2748"/>
+    <circle cx="44" cy="55" r="2.2" fill="#fff"/><circle cx="80" cy="55" r="2.2" fill="#fff"/>
+    <ellipse cx="30" cy="72" rx="9" ry="5.5" fill="#FF8FBE" opacity=".75"/>
+    <ellipse cx="90" cy="72" rx="9" ry="5.5" fill="#FF8FBE" opacity=".75"/>
+    <path d="M55 70 Q60 76 60 70 Q60 76 65 70" fill="none" stroke="#5B2748" stroke-width="3" stroke-linecap="round"/>
+    <path d="M57 66 L63 66 L60 70 Z" fill="#D63A82"/>
+    <path d="M8 62 L24 65 M8 74 L24 72 M112 62 L96 65 M112 74 L96 72" stroke="#5B2748" stroke-width="2.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
 
-Wrote a Linux tool in C with a parent-child process design (fork) that scans directories and detects text files.
-Passed file data between processes with pipe-based IPC, and automated build and run with a Bash script and Makefile, logging all activity and backups.
-C
-Bash
-Makefile
-Healthcare System Using Web UI
-April 2025
-Created a responsive web interface for a healthcare information system covering patient and staff records and appointments.
-Object-oriented Python
-Solar Panel Detection Device
-April 2025
-Built a solar-powered device that senses light intensity and motion and adjusts panel orientation to capture more energy.
-C++
-Arduino
-LDR sensors
-Inventory Management System
-November 2024
-Developed a desktop app for managing product inventory and stock levels, using OOP concepts like inheritance and abstract classes.
-Java
-Certificates
-🌷
-Odoo Technical Summer Bootcamp
-Odoo, Summer 2026
+<span class="floaty f1" aria-hidden="true">🌸</span>
+<span class="floaty f2" aria-hidden="true">💖</span>
 
-🛡️
-Cyber Threat Management
-Cisco Networking Academy via Canadian University Dubai
-30 April 2026
+<nav aria-label="Main">
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#certs">Certificates</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-💻
-C Essentials 1
-Cisco Networking Academy via Canadian University Dubai
-13 April 2026
+<header class="hero">
+  <div class="wrap">
+    <h1>Hi, I’m Aya! 🎀</h1>
+    <p class="sub">Cybersecurity student on my way to becoming a <span>SOC analyst</span> and <span>pentester</span></p>
 
-📚 Publication
-Aburamadan, N., Al-Obaidi, A., & Khurana, M. (2026). Future Directions and Ethical/Regulatory Implications of AI/ML in Cybersecurity. Canadian University Dubai.
+    <div class="catwrap">
+      <svg class="peek" role="img" aria-label="A cute pink cat peeking over the terminal"><use href="#cat"/></svg>
+      <div class="term">
+        <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>meow-terminal</span></div>
+<pre><span class="p">$</span> whoami
+<span class="o">aya-al-obaidi 🐾</span>
+<span class="p">$</span> cat interests.txt
+<span class="o">soc analysis, penetration testing,
+ethical hacking, digital privacy</span>
+<span class="p">$</span> cat status.txt
+<span class="o">final-year @ Canadian University Dubai
+graduating 2027, hunting for bugs and threats</span>
+<span class="p">$</span> <span class="cursor"></span></pre>
+      </div>
+    </div>
 
-Skills
-Security
+    <div class="btns">
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn alt" href="#contact">Say hi</a>
+    </div>
+  </div>
+</header>
 
-Network security
-Cisco Packet Tracer
-Cryptography (RSA, SHA-256)
-Digital signatures
-Adversarial testing
-Anomaly detection
-Locust load testing
-Programming and data
+<main>
+<section id="about">
+  <div class="wrap">
+    <h2><svg><use href="#cat"/></svg>About me</h2>
+    <div class="box">
+      <p>I’m a final-year B.Sc. Cybersecurity student at Canadian University Dubai, and honestly, I can’t get enough of this field. I love the moment a pile of noisy logs turns into a story, and I love the moment a system that looked solid turns out to have a crack in it.</p>
+      <p>That’s why I’m aiming for a career in <strong>SOC analysis</strong> and <strong>penetration testing</strong>: watching for threats on the defense side, and thinking like an attacker to find weaknesses before someone else does. Ethical hacking, network security, and digital privacy are what I read about for fun.</p>
+      <p>So far I’ve built a signed-message system with RSA, written Linux tools in C, run adversarial experiments against edge services, and co-authored a research paper on the ethics and regulation of AI in cybersecurity. I’m just getting started, and I’m always learning something new. 💕</p>
+    </div>
+  </div>
+</section>
 
-Python
-Java
-C
-Prolog
-Linux/Unix and shell scripting
-SQL (MySQL)
-MongoDB
-Servlets/JSP
-Maven
-ML classifiers (RF, SVM, MLP)
-Tools and people skills
+<section id="projects">
+  <div class="wrap">
+    <h2><svg><use href="#cat"/></svg>Projects</h2>
+    <p style="margin-bottom:20px">Newest first.</p>
+    <ul class="tl">
 
-VS Code
-Odoo/ERP
-Word, PowerPoint, Excel
-Teamwork
-Persuasive communication
-Analytical thinking
-Negotiation
-Staying calm under pressure
-Education and languages
-Canadian University Dubai
-B.Sc. Cybersecurity, 2023 to 2027 (expected)
+      <li><article class="proj star">
+        <header><h3>LightEdge-Guard: Edge Microservice Security</h3><span class="date">2026</span></header>
+        <p class="role">Security Lead, team research project with Maryam and Ketty</p>
+        <ul>
+          <li>Led research into resource exhaustion attacks and anomaly detection for edge computing microservices.</li>
+          <li>Designed an adversarial experiment grid covering three attack scenarios: noisy neighbor, memory pressure, and request flood.</li>
+          <li>Simulated attack traffic with Locust and tested ML classifiers (Random Forest, SVM, MLP) to spot attack signatures.</li>
+        </ul>
+        <div class="tags"><span>Security research</span><span>Locust</span><span>Machine learning</span></div>
+      </article></li>
 
-Languages: Arabic (native), English (fluent)
+      <li><article class="proj">
+        <header><h3>Research Paper: AI/ML in Cybersecurity, Ethics and Regulation</h3><span class="date">2026</span></header>
+        <p class="role">Co-author, Canadian University Dubai, Department of Cybersecurity</p>
+        <ul>
+          <li>Co-wrote a systematic literature review of 20 peer-reviewed sources on AI/ML in cybersecurity, covering ethics, regulation, and adversarial threats.</li>
+          <li>Proposed the Three-Pillar Assessment Framework for Responsible AI Deployment: adversarial robustness, explainability security, and regulatory compliance mapping.</li>
+        </ul>
+        <div class="tags"><span>Research</span><span>AI ethics</span><span>Regulation</span></div>
+      </article></li>
 
-Let’s connect
-I’m looking for internships and entry-level roles in SOC analysis and penetration testing. If you’d like to chat about security (or cats), I’d love to hear from you!
+      <li><article class="proj">
+        <header><h3>StreamVault: Streaming Platform Web App</h3><span class="date">2026</span></header>
+        <ul>
+          <li>Built a Java web app prototype for a video-streaming platform with login, registration, subscriptions, and a watchlist.</li>
+          <li>Connected it to a MySQL backend through JDBC.</li>
+        </ul>
+        <div class="tags"><span>Java</span><span>Servlets/JSP</span><span>Maven</span><span>MySQL</span></div>
+      </article></li>
 
-Email me
-My GitHub
-Made with 💖 and way too many cat emojis 🐱 · Aya Al Obaidi, 2026
+      <li><article class="proj">
+        <header><h3>Airline Reservation System: Database Case Study</h3><span class="date">May 2026</span></header>
+        <p class="role">Individual project</p>
+        <ul>
+          <li>Designed a relational database covering aircraft, routes, passengers, flights, and reservations, with an ER diagram, schema, sample data, and query scripts.</li>
+          <li>Rebuilt the same system in MongoDB with CRUD operations and aggregation pipelines to compare relational and NoSQL approaches.</li>
+        </ul>
+        <div class="tags"><span>SQL (MySQL)</span><span>MongoDB</span></div>
+      </article></li>
+
+      <li><article class="proj">
+        <header><h3>Signed Message Exchange Between Two Parties</h3><span class="date">April 2026</span></header>
+        <p class="role">Team of 4</p>
+        <ul>
+          <li>Built a secure signed-message exchange using 2048-bit RSA key pairs, SHA-256 hashing, and PKCS1v15 digital signatures.</li>
+          <li>Showed that changing even one character invalidates the signature, proving tamper detection works.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>RSA</span><span>SHA-256</span></div>
+      </article></li>
+
+      <li><article class="proj">
+        <header><h3>Linux Multi-Process File Monitoring and Backup System</h3><span class="date">April 2026</span></header>
+        <p class="role">Team of 2</p>
+        <ul>
+          <li>Wrote a Linux tool in C with a parent-child process design (fork) that scans directories and detects text files.</li>
+          <li>Passed file data between processes with pipe-based IPC, and automated build and run with a Bash script and Makefile, logging all activity and backups.</li>
+        </ul>
+        <div class="tags"><span>C</span><span>Bash</span><span>Makefile</span></div>
+      </article></li>
+
+      <li><article class="proj">
+        <header><h3>Healthcare System Using Web UI</h3><span class="date">April 2025</span></header>
+        <ul>
+          <li>Created a responsive web interface for a healthcare information system covering patient and staff records and appointments.</li>
+        </ul>
+        <div class="tags"><span>Object-oriented Python</span></div>
+      </article></li>
+
+      <li><article class="proj">
+        <header><h3>Solar Panel Detection Device</h3><span class="date">April 2025</span></header>
+        <ul>
+          <li>Built a solar-powered device that senses light intensity and motion and adjusts panel orientation to capture more energy.</li>
+        </ul>
+        <div class="tags"><span>C++</span><span>Arduino</span><span>LDR sensors</span></div>
+      </article></li>
+
+      <li><article class="proj">
+        <header><h3>Inventory Management System</h3><span class="date">November 2024</span></header>
+        <ul>
+          <li>Developed a desktop app for managing product inventory and stock levels, using OOP concepts like inheritance and abstract classes.</li>
+        </ul>
+        <div class="tags"><span>Java</span></div>
+      </article></li>
+
+    </ul>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="wrap">
+    <h2><svg><use href="#cat"/></svg>Certificates</h2>
+    <div class="grid">
+      <div class="cert"><div class="em">🌷</div><h3>Odoo Technical Summer Bootcamp</h3><p>Odoo, Summer 2026</p></div>
+      <div class="cert"><div class="em">🛡️</div><h3>Cyber Threat Management</h3><p>Cisco Networking Academy via Canadian University Dubai<br>30 April 2026</p></div>
+      <div class="cert"><div class="em">💻</div><h3>C Essentials 1</h3><p>Cisco Networking Academy via Canadian University Dubai<br>13 April 2026</p></div>
+    </div>
+
+    <div class="box" style="margin-top:26px">
+      <h3 style="margin-bottom:6px">📚 Publication</h3>
+      <p>Aburamadan, N., Al-Obaidi, A., &amp; Khurana, M. (2026). <em>Future Directions and Ethical/Regulatory Implications of AI/ML in Cybersecurity.</em> Canadian University Dubai.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2><svg><use href="#cat"/></svg>Skills</h2>
+    <div class="box">
+      <p class="skills-title">Security</p>
+      <div class="chips"><span>Network security</span><span>Cisco Packet Tracer</span><span>Cryptography (RSA, SHA-256)</span><span>Digital signatures</span><span>Adversarial testing</span><span>Anomaly detection</span><span>Locust load testing</span></div>
+      <p class="skills-title">Programming and data</p>
+      <div class="chips"><span>Python</span><span>Java</span><span>C</span><span>Prolog</span><span>Linux/Unix and shell scripting</span><span>SQL (MySQL)</span><span>MongoDB</span><span>Servlets/JSP</span><span>Maven</span><span>ML classifiers (RF, SVM, MLP)</span></div>
+      <p class="skills-title">Tools and people skills</p>
+      <div class="chips"><span>VS Code</span><span>Odoo/ERP</span><span>Word, PowerPoint, Excel</span><span>Teamwork</span><span>Persuasive communication</span><span>Analytical thinking</span><span>Negotiation</span><span>Staying calm under pressure</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2><svg><use href="#cat"/></svg>Education and languages</h2>
+    <div class="box">
+      <h3>Canadian University Dubai</h3>
+      <p>B.Sc. Cybersecurity, 2023 to 2027 (expected)</p>
+      <p><strong>Languages:</strong> Arabic (native), English (fluent)</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <h2 style="justify-content:center"><svg><use href="#cat"/></svg>Let’s connect</h2>
+    <div class="box">
+      <p>I’m looking for internships and entry-level roles in SOC analysis and penetration testing. If you’d like to chat about security (or cats), I’d love to hear from you!</p>
+      <div class="btns" style="margin-top:0">
+        <a class="btn" href="mailto:aalobaidi7775@gmail.com">Email me</a>
+        <a class="btn alt" href="https://github.com/ayaalobaidi2005">My GitHub</a>
+        <!-- LinkedIn: remove these comment marks and paste your link
+        <a class="btn alt" href="YOUR-LINKEDIN-URL">LinkedIn</a>
+        -->
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Made with 💖 and way too many cat emojis 🐱 · Aya Al Obaidi, 2026</footer>
+
+</body>
+</html>
